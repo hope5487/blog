@@ -96,10 +96,9 @@ export default function NotificationDropdown() {
           viewBox="0 0 24 24" 
           width="22" 
           height="22" 
-          className="fill-current text-gray-700 dark:text-gray-300"
-          style={{ verticalAlign: 'middle' }}
+          className="fill-black dark:fill-white"
         >
-          <path d="M5 5a7 7 0 0 1 14 0v2.172c0 .414.164.812.456 1.105l2.958 2.958a.5.5 0 0 1-.316.884H16v2a4 4 0 0 1-8 0v-2H1.902a.5.5 0 0 1-.316-.884l2.958-2.958A2 2 0 0 0 5 7.172V5zm7 13a2 2 0 0 0 2-2v-2H10v2a2 2 0 0 0 2 2z" />
+          <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
         </svg>
         
         {unreadCount > 0 && (
