@@ -1,0 +1,45 @@
+name: Deploy to Google Cloud VM
+
+on:
+  push:
+    branches: [ main ]  # 메인 브랜치에 푸시될 때 실행
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build Next.js app
+      run: npm run build
+      env:
+        # 환경 변수 설정 (GitHub Secrets에서 가져옴)
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        NEXTAUTH_URL: ${{ secrets.NEXTAUTH_URL }}
+        NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
+        GITHUB_ID: ${{ secrets.OAUTH_GITHUB_ID }}
+        GITHUB_SECRET: ${{ secrets.OAUTH_GITHUB_SECRET }}
+      
+    - name: Deploy to VM
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.VM_HOST }}
+        username: ${{ secrets.VM_USERNAME }}
+        key: ${{ secrets.VM_SSH_KEY }}
+        script: |
+          cd ~/your-project-directory
+          git pull
+          npm ci
+          npm run build
+          pm2 restart nextjs-blog
