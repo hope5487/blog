@@ -37,7 +37,7 @@ export default async function ProfileSidebar() {
         <div className="w-32 h-32 mx-auto mb-4 relative rounded-full overflow-hidden bg-blue-500 flex items-center justify-center text-white">
           <span className="text-4xl font-bold">RC</span>
         </div>
-        <h2 className="text-xl font-bold dark:text-white">로이 초</h2>
+        <h2 className="text-xl font-bold dark:text-white">조 승 현</h2>
         <p className="text-gray-600 dark:text-gray-400">블로그 운영자</p>
       </div>
       
