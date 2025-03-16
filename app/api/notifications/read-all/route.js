@@ -6,7 +6,7 @@ import { authOptions } from '../../../lib/auth';
 const prisma = new PrismaClient();
 
 // 모든 알림을 읽음으로 표시
-export async function PUT() {
+export async function PUT(request) {
   const session = await getServerSession(authOptions);
   
   if (!session) {
