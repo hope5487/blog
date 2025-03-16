@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { PrismaClient } from '@prisma/client';
 import { notFound } from 'next/navigation';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../../api/auth/[...nextauth]/route';
+import { authOptions } from '../../lib/auth';
 import CommentSection from '../../components/CommentSection';
 import DeletePostButton from '../../components/DeletePostButton';
 

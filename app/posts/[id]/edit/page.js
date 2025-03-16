@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { PrismaClient } from '@prisma/client';
 import { getServerSession } from 'next-auth';
-import { authOptions } from '../../../api/auth/[...nextauth]/route';
+import { authOptions } from '../../../lib/auth';
 import EditPostForm from '../../../components/EditPostForm';
 import Link from 'next/link';
 
