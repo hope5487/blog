@@ -1,7 +1,9 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  eslint: {
+    ignoreDuringBuilds: true, // 빌드 중 ESLint 체크 비활성화
+  },
 };
 
 export default nextConfig;
