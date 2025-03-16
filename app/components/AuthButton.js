@@ -23,6 +23,7 @@ export default function AuthButton() {
               width={32}
               height={32}
               className="rounded-full"
+              unoptimized
             />
           )}
           <span>{session.user.name}</span>

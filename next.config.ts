@@ -6,4 +6,10 @@ const nextConfig: NextConfig = {
   },
 };
 
+module.exports = {
+  images: {
+    domains: ['avatars.githubusercontent.com', 'github.githubassets.com'],
+  },
+};
+
 export default nextConfig;

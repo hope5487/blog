@@ -88,10 +88,17 @@ export default function NotificationDropdown() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+        className="relative p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors flex items-center justify-center"
         title="알림"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" className="fill-current">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          viewBox="0 0 24 24" 
+          width="22" 
+          height="22" 
+          className="fill-current text-gray-700 dark:text-gray-300"
+          style={{ verticalAlign: 'middle' }}
+        >
           <path d="M5 5a7 7 0 0 1 14 0v2.172c0 .414.164.812.456 1.105l2.958 2.958a.5.5 0 0 1-.316.884H16v2a4 4 0 0 1-8 0v-2H1.902a.5.5 0 0 1-.316-.884l2.958-2.958A2 2 0 0 0 5 7.172V5zm7 13a2 2 0 0 0 2-2v-2H10v2a2 2 0 0 0 2 2z" />
         </svg>
         
