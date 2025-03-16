@@ -19,9 +19,9 @@ export default async function EditPostPage({ params }) {
       <div className="container mx-auto my-10 p-5 text-center">
         <h1 className="text-xl font-bold">접근 권한이 없습니다.</h1>
         <p>관리자만 글을 수정할 수 있습니다.</p>
-        <a href="/" className="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+        <Link href="/" className="mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
           홈으로 돌아가기
-        </a>
+        </Link>
       </div>
     );
   }

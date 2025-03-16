@@ -6,7 +6,7 @@ import { authOptions } from '../../auth/[...nextauth]/route';
 const prisma = new PrismaClient();
 
 // 특정 게시물 가져오기
-export async function GET(request, { params }) {
+export async function GET({ params }) {
     const resolvedParams = await Promise.resolve(params);
     const { id } = resolvedParams;
   
@@ -100,7 +100,7 @@ export async function PUT(request, { params }) {
 }
 
 // 게시물 삭제
-export async function DELETE(request, { params }) {
+export async function DELETE( { params }) {
     const resolvedParams = await Promise.resolve(params);
     const { id } = resolvedParams;
     

@@ -50,7 +50,7 @@ export default async function SearchPage({ searchParams }) {
       </div>
       
       <div className="md:w-3/4">
-        <h1 className="text-3xl font-bold mb-4">"{query}" 검색 결과</h1>
+        <h1 className="text-3xl font-bold mb-4">&ldquo;{query}&rdquo; 검색 결과</h1>
         <p className="mb-8 text-gray-600 dark:text-gray-400">총 {posts.length}개의 게시물을 찾았습니다.</p>
         
         {posts.length > 0 ? (

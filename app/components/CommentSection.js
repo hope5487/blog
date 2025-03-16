@@ -151,7 +151,7 @@ export default function CommentSection({ postId, postTitle }) {
       ) : (
         <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 rounded border dark:border-gray-700 text-center">
           <p className="text-gray-600 dark:text-gray-300">
-            댓글을 작성하려면 <a href="/api/auth/signin" className="text-blue-500 hover:underline">로그인</a>이 필요합니다.
+            댓글을 작성하려면 <Link href="/api/auth/signin" className="text-blue-500 hover:underline">로그인</Link>이 필요합니다.
           </p>
         </div>
       )}

@@ -17,7 +17,7 @@ export default function MenuBar({ editor }) {
     input.type = 'file';
     input.accept = 'image/*';
     
-    input.onchange = async (event) => {
+    input.onchange = async () => {
       if (input.files?.length) {
         const file = input.files[0];
         const reader = new FileReader();

@@ -6,7 +6,7 @@ import { authOptions } from '../../../api/auth/[...nextauth]/route';
 const prisma = new PrismaClient();
 
 // 특정 알림을 읽음으로 표시
-export async function PUT(request, { params }) {
+export async function PUT({ params }) {
   const session = await getServerSession(authOptions);
   
   if (!session) {

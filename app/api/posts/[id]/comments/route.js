@@ -6,7 +6,7 @@ import { authOptions } from '../../../auth/[...nextauth]/route';
 const prisma = new PrismaClient();
 
 // 게시물의 댓글 목록 가져오기
-export async function GET(request, { params }) {
+export async function GET({ params }) {
   // params를 Promise로 처리
   const resolvedParams = await Promise.resolve(params);
   const { id } = resolvedParams;
